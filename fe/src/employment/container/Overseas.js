@@ -3,7 +3,7 @@ import "../component/Overseas.css";
 
 function Overseas(props) {
   return (
-    <div className="wrapper">
+    <div id="oversea">
       <div className="title">
         <img
           src={require("../../images/title_03.jpg").default}
