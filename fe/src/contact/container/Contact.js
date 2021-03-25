@@ -4,7 +4,7 @@ import "../component/Contact.css";
 
 function Contact(props) {
   return (
-    <div className="wrapper">
+    <div id="contact">
       <div className="title">
         <img src={require("../../images/title_06.jpg").default} alt />
         <p className="title_main bold">CONTACT US</p>
