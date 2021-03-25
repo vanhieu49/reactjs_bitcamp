@@ -3,7 +3,7 @@ import "../component/Employment.css";
 
 function Employment(props) {
   return (
-    <div className="wrapper">
+    <div className="employ">
       <div className="title">
         <img
           src={require("../../images/title_03.jpg").default}
