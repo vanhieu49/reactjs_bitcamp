@@ -1,6 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../component/Header.css";
+
+const popupnav = document.querySelector(".nav__menu");
+
+const headerChange = document.querySelector(".header");
+const changeColora = document.querySelectorAll(".header__menu-nav li a");
+const changeImg = document.querySelector(".header__menu-icon img");
+const changeIcon = document.querySelector(".header__menu-nav-btn i");
+
+const handleOpenSubmenu = () => {
+  popupnav.style.display = "block";
+};
+
+const handleCloseSubmenu = () => {
+  popupnav.style.display = "none";
+};
+
+window.onscroll = () => {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    console.log("changeColora.length", changeColora.length);
+    headerChange.style.backgroundColor = "#fff";
+    headerChange.style.borderBottom = "2px solid black";
+    changeImg.style.backgroundColor = "blue";
+    for (let i = 0; i < changeColora.length; i++) {
+      changeColora[i].style.color = "black";
+    }
+  } else {
+    headerChange.style.backgroundColor = "#151726";
+    changeImg.style.backgroundColor = "";
+    for (let i = 0; i < changeColora.length; i++) {
+      changeColora[i].style.color = "white";
+    }
+  }
+};
 
 const Header = () => {
   return (
@@ -9,7 +42,10 @@ const Header = () => {
       <header className="header">
         <div className="header__menu">
           <div className="header__menu-icon">
-            <img src={require("../../images/logo.png").default} />
+            <Link to="/">
+              {" "}
+              <img src={require("../../images/logo.png").default} />
+            </Link>
           </div>
           <nav className="header__menu-nav">
             <ul>
@@ -124,7 +160,7 @@ const Header = () => {
             </ul>
           </nav>
           <div className="header__menu-nav-btn">
-            <i className="fas fa-align-justify" id="subnav" />
+            <i className="fas fa-align-justify" onClick={handleOpenSubmenu} />
           </div>
         </div>
       </header>
@@ -132,7 +168,11 @@ const Header = () => {
       <section className="nav__menu">
         <div className="nav__menu-title">
           <h5>All Menu</h5>
-          <i className="fas fa-times" id="closesubmenu" />
+          <i
+            className="fas fa-times"
+            id="closesubmenu"
+            onClick={handleCloseSubmenu}
+          />
         </div>
         <hr />
         <div className="nav__menu-btn">
