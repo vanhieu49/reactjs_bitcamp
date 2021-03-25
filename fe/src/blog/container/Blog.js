@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../component/Blog.css";
 
 function Blog(props) {
@@ -7,7 +8,7 @@ function Blog(props) {
       <div id="container_title_box">
         <img
           src="https://www.bitcamp.co.kr/theme/basic/img/title_04.jpg"
-          alt
+          alt="hinh anh tuong trung"
           className="full"
         />
         <p className="font25 bold">Blog</p>
@@ -51,7 +52,7 @@ function Blog(props) {
                     <a>
                       <img
                         src="https://www.bitcamp.co.kr/data/file/blog/thumb-2038919246_iCclLjnK_972202b3e4ab9316f81dab9ebf38574a38b2aa6c_380x200.png"
-                        alt
+                        alt="hinh anh tuong trung"
                         title
                       />
                     </a>
@@ -91,7 +92,7 @@ function Blog(props) {
                     <a>
                       <img
                         src="https://www.bitcamp.co.kr/data/file/blog/thumb-2038919246_iCclLjnK_972202b3e4ab9316f81dab9ebf38574a38b2aa6c_380x200.png"
-                        alt
+                        alt="hinh anh tuong trung"
                         title
                       />
                     </a>
@@ -131,7 +132,7 @@ function Blog(props) {
                     <a>
                       <img
                         src="https://www.bitcamp.co.kr/data/file/blog/thumb-2038919246_iCclLjnK_972202b3e4ab9316f81dab9ebf38574a38b2aa6c_380x200.png"
-                        alt
+                        alt="hinh anh tuong trung"
                         title
                       />
                     </a>
@@ -171,7 +172,7 @@ function Blog(props) {
                     <a>
                       <img
                         src="https://www.bitcamp.co.kr/data/file/blog/thumb-2038919246_iCclLjnK_972202b3e4ab9316f81dab9ebf38574a38b2aa6c_380x200.png"
-                        alt
+                        alt="hinh anh tuong trung"
                         title
                       />
                     </a>
@@ -208,13 +209,11 @@ function Blog(props) {
             </ul>
           </div>
           <div className="pagination">
-            <a href="#">«</a>
-            <a href="#" className="active">
-              1
-            </a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">»</a>
+            <Link>«</Link>
+            <Link className="active">1</Link>
+            <Link>2</Link>
+            <Link>3</Link>
+            <Link>»</Link>
           </div>
         </div>
       </div>

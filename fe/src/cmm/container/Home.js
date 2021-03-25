@@ -1,8 +1,5 @@
 import React from "react";
-
 import "../component/Home.css";
-import CompHeader from "./Header";
-import CompFooter from "./Footer";
 
 const Home = () => {
   return (

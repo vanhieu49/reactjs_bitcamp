@@ -1,6 +1,25 @@
 import React from "react";
 import "../component/Footer.css";
 
+const openChat = document.querySelector(".popupchat");
+const btnScrollTop = document.querySelector(".topheader__btn");
+
+const hanldeOpenMess = () => {
+  openChat.style.display = "block";
+};
+
+const hanldeCloseMess = () => {
+  openChat.style.display = "none";
+};
+
+const handleBtnTop = () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+};
+
 const Footer = () => {
   return (
     <footer>
@@ -77,7 +96,7 @@ const Footer = () => {
         </div>
       </div>
       {/* message chatbox */}
-      <div className="mess">
+      <div className="mess" onClick={hanldeOpenMess}>
         <i className="fas fa-comment-dots" />
       </div>
       {/* popup chat message */}
@@ -89,7 +108,11 @@ const Footer = () => {
             </div>
             <div>
               <i className="fas fa-cog" />
-              <i className="fas fa-times" id="closeChat" />
+              <i
+                className="fas fa-times"
+                id="closeChat"
+                onClick={hanldeCloseMess}
+              />
             </div>
           </div>
           <div className="popupchat__content-active">
@@ -161,7 +184,7 @@ const Footer = () => {
         <div className="topheader__call">
           <img src={require("../../images/call_quick.png").default} alt />
         </div>
-        <div className="topheader__btn">
+        <div className="topheader__btn" onClick={handleBtnTop}>
           <i className="fas fa-arrow-up" />
         </div>
       </div>
