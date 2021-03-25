@@ -2,22 +2,21 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../component/Header.css";
 
-const popupnav = document.querySelector(".nav__menu");
-
-const headerChange = document.querySelector(".header");
-const changeColora = document.querySelectorAll(".header__menu-nav li a");
-const changeImg = document.querySelector(".header__menu-icon img");
-const changeIcon = document.querySelector(".header__menu-nav-btn i");
+const popupnav = document.getElementsByClassName("nav__menu");
 
 const handleOpenSubmenu = () => {
-  popupnav.style.display = "block";
+  console.log("popupnav.style:", (popupnav[0].style.display = "block"));
+  popupnav[0].style.display = "block";
 };
 
 const handleCloseSubmenu = () => {
-  popupnav.style.display = "none";
+  popupnav[0].style.display = "none";
 };
 
 window.onscroll = () => {
+  const headerChange = document.querySelector(".header");
+  const changeColora = document.querySelectorAll(".header__menu-nav li a");
+  const changeImg = document.querySelector(".header__menu-icon img");
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     console.log("changeColora.length", changeColora.length);
     headerChange.style.backgroundColor = "#fff";

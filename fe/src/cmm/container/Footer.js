@@ -1,15 +1,15 @@
 import React from "react";
 import "../component/Footer.css";
 
-const openChat = document.querySelector(".popupchat");
-const btnScrollTop = document.querySelector(".topheader__btn");
+const openChat = document.getElementsByClassName("popupchat");
 
 const hanldeOpenMess = () => {
-  openChat.style.display = "block";
+  console.log("openChat:", openChat);
+  openChat[0].style.display = "block";
 };
 
 const hanldeCloseMess = () => {
-  openChat.style.display = "none";
+  openChat[0].style.display = "none";
 };
 
 const handleBtnTop = () => {
